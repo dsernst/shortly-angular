@@ -1,8 +1,10 @@
 <div id='signup'>
   <h1>signup</h1>
   <form name="signupForm" ng-submit='signup()'>
-    <input type='text' ng-model='user.username'>
-    <input type="password" ng-model='user.password'>
+    <input type='text' ng-model='user.username' ng-click="valid.username = true">
+    <div ng-hide="valid.username" class="error">Your username has invalid characters or is too long.</div>
+    <input type="password" ng-model='user.password' ng-click="valid.password = true">
+    <div ng-hide="valid.password" class="error">Your password is too long!</div>
     <button>signup</button>
   </form>
   <a href="#/signin">Already have an account? <strong>Signin</strong> ...</a>

@@ -123,6 +123,7 @@ input[type=url]:focus {
   border: red solid 4px;
   padding: 10px;
   margin: 0 10px;
+  width: 300px;
 }
 
 .clean {
