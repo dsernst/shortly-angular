@@ -23,7 +23,7 @@ angular.module('shortly', [
 })
 .factory('AttachTokens', function ($window) {
   // this is an $httpInterceptor
-  // its job is to stop all out going request
+  // its job is to stop all outgoing requests
   // then look in local storage and find the user's token
   // then add it to the header so the server can validate the request
   var attach = {
