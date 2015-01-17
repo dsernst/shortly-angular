@@ -1,7 +1,15 @@
 angular.module('shortly.services', [])
 
 .factory('Links', function ($http) {
-  // Your code here
+  var getLinks = function(){
+    return $http({
+      method: 'GET',
+      url: '/api/links'
+    })
+  };
+  return {
+    getLinks: getLinks
+  }
 })
 .factory('Auth', function ($http, $location, $window) {
   // Don't touch this Auth service!!!
@@ -11,6 +19,7 @@ angular.module('shortly.services', [])
   // that JWT is then stored in localStorage as 'com.shortly'
   // after you signin/signup open devtools, click resources,
   // then localStorage and you'll see your token from the server
+
   var signin = function (user) {
     return $http({
       method: 'POST',
@@ -41,7 +50,6 @@ angular.module('shortly.services', [])
     $window.localStorage.removeItem('com.shortly');
     $location.path('/signin');
   };
-
 
   return {
     signin: signin,
