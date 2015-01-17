@@ -48,6 +48,12 @@ h1 {
   background-color: #ccc;
 }
 
+.logout {
+  float: right;
+  line-height: 40px;
+  padding-right: 10px;
+}
+
 #container {
   clear: both;
   margin-top: 10px;
@@ -113,7 +119,6 @@ input[type=url]:focus {
   outline: none;
 }
 
-
 .error {
   border: red solid 4px;
   padding: 10px;
@@ -145,4 +150,3 @@ input[type=url]:focus {
 .creator .message {
   clear: both;
 }
-
